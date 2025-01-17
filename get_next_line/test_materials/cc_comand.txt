@@ -1,0 +1,5 @@
+cc -Wall -Wextra -Werror -g -D BUFFER_SIZE=5 ../bonus/get_next_line_bonus.c ../bonus/get_next_line_utils_bonus.c main_bonus.c
+
+cc -Wall -Wextra -Werror -g -D BUFFER_SIZE=5 ../mandatory/get_next_line.c ../mandatory/get_next_line_utils.c main.c
+
+valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes ./a.out

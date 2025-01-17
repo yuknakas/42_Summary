@@ -1,0 +1,1 @@
+cat /etc/passwd | grep -v '^#' | awk 'NR % 2 == 0' | cut -d':' -f1 | awk '{for(i=length;i>0;i--) printf "%s", substr($0,i,1); printf "\n"}' | sort -r | awk "NR >= $FT_LINE1 && NR <= $FT_LINE2" | tr '\n' ', ' | sed 's/, $/./'
